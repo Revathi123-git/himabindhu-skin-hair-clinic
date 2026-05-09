@@ -21,13 +21,35 @@ export function Footer() {
             <p className="text-sm opacity-70 leading-relaxed">
               Personalized, evidence-based dermatology by {CLINIC.doctor}. {CLINIC.experience} of trusted care since {CLINIC.established}.
             </p>
-            <div className="flex gap-3 mt-6">
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary transition-smooth"><MessageCircle className="w-4 h-4" /></a>
-              <a href="#" className="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary transition-smooth"><Instagram className="w-4 h-4" /></a>
-              <a href="#" className="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary transition-smooth"><Facebook className="w-4 h-4" /></a>
-            </div>
-          </div>
+         <div className="flex gap-3 mt-6">
+  <a
+    href={WHATSAPP_URL}
+    target="_blank"
+    rel="noreferrer"
+    className="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary transition-smooth"
+  >
+    <MessageCircle className="w-4 h-4" />
+  </a>
 
+  <a
+    href="https://www.instagram.com/drhimabindumamidala?igsh=OWo0d3J1aTl0Y3oy"
+    target="_blank"
+    rel="noreferrer"
+    className="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary transition-smooth"
+  >
+    <Instagram className="w-4 h-4" />
+  </a>
+
+  <a
+    href="https://www.facebook.com/share/1CyhYvQxRt/"
+    target="_blank"
+    rel="noreferrer"
+    className="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary transition-smooth"
+  >
+    <Facebook className="w-4 h-4" />
+  </a>
+</div>
+</div>
           <div>
             <h4 className="font-display text-lg mb-5">Quick Links</h4>
             <ul className="space-y-3 text-sm opacity-80">

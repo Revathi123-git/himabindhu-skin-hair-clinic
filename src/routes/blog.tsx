@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Search, Calendar, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
-import doctorImg from "@/assets/doctor.jpg";
+import doctorImg from "@/assets/doctor.png";
 import clinicImg from "@/assets/clinic.jpg";
 import { Reveal } from "@/components/site/Reveal";
 

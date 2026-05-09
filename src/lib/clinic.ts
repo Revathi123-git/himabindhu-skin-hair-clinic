@@ -9,9 +9,9 @@ export const CLINIC = {
   phone: "7670913859",
   whatsapp: "9014912041",
   whatsappIntl: "919014912041",
-  email: "drmhimaabindu@gmail.com",
+  email: "drmhimabindu@gmail.com",
   address: "Hyderabad, Telangana, India",
-  hours: "Mon – Sat: 10:00 AM – 8:00 PM",
+  hours: "Mon – Sat: Morning: 10:00 AM – 1:00 PM Evening: 5:00 PM – 9:00 PM", 
 };
 
 export const WHATSAPP_URL = `https://wa.me/${CLINIC.whatsappIntl}`;
