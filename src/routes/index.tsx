@@ -5,7 +5,7 @@ import {
   Sparkles, Heart, CheckCircle2,
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
-import doctorImg from "@/assets/doctor.jpg";
+import doctorImg from "@/assets/doctor.png";
 import clinicImg from "@/assets/clinic.jpg";
 import { CLINIC, WHATSAPP_URL } from "@/lib/clinic";
 import { SERVICES } from "@/lib/services";
