@@ -22,6 +22,8 @@ reuse existing images until you add real ones.
 
 import equipmentImg from "@/assets/equi1.png";
 import equipmentImg2 from "@/assets/equi2.png";
+import equipmentImg3 from "@/assets/equi3.png";
+import equipmentImg4 from "@/assets/equi4.png";
 
 
 import certificate1 from "@/assets/certificate1.png";
@@ -32,6 +34,11 @@ import certificate5 from "@/assets/certificate5.png";
 import certificate6 from "@/assets/certificate6.png";
 import certificate7 from "@/assets/certificate7.png";
 import doctor2 from "@/assets/doctor2.png";
+import doctor3 from "@/assets/doctor3.png";
+import doctor4 from "@/assets/doctor4.jpg";
+
+
+
 
 import staffImg from "@/assets/hero.jpg";
 
@@ -123,17 +130,17 @@ const GALLERY_SECTIONS = [
       {
         src: equipmentImg2,
         alt: "Skin Analysis Device",
-        h: "short",
+        h: "tall",
       },
 
       {
-        src: equipmentImg,
+        src: equipmentImg3,
         alt: "Hydra Facial Machine",
-        h: "short",
+        h: "tall",
       },
 
       {
-        src: heroImg,
+        src: equipmentImg4,
         alt: "Hair Treatment Equipment",
         h: "tall",
       },
@@ -210,25 +217,25 @@ const GALLERY_SECTIONS = [
 
     images: [
       {
-        src: staffImg,
+        src: certificate2,
         alt: "Clinic Staff",
+        h: "short",
+      },
+
+      {
+        src: doctor2,
+        alt: "Doctor Consultation",
         h: "tall",
       },
 
       {
-        src: doctorImg,
-        alt: "Doctor Consultation",
-        h: "short",
-      },
-
-      {
-        src: staffImg,
+        src: doctor3,
         alt: "Team Collaboration",
-        h: "short",
+        h: "tall",
       },
 
       {
-        src: doctorImg,
+        src: doctor4,
         alt: "Professional Consultation",
         h: "tall",
       },

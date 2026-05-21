@@ -4,7 +4,7 @@ import {
   ArrowRight, MessageCircle, Star, Award, Users, Calendar, ShieldCheck,
   Sparkles, Heart, CheckCircle2,
 } from "lucide-react";
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/hero.png";
 import doctorImg from "@/assets/doctor.png";
 import clinicImg from "@/assets/clinic.jpg";
 import { CLINIC, WHATSAPP_URL } from "@/lib/clinic";
