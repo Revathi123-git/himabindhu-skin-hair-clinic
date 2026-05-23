@@ -102,7 +102,14 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+
+        {/* ✅ Elfsight Google Reviews script */}
+        <script
+          src="https://elfsightcdn.com/platform.js"
+          async
+        ></script>
       </head>
+
       <body>
         {children}
         <Scripts />
@@ -110,7 +117,6 @@ function RootShell({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
-
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
