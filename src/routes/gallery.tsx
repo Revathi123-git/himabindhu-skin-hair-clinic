@@ -33,6 +33,7 @@ import certificate4 from "@/assets/certificate4.png";
 import certificate5 from "@/assets/certificate5.png";
 import certificate6 from "@/assets/certificate6.png";
 import certificate7 from "@/assets/certificate7.png";
+import certificate8 from "@/assets/certificate8.png";
 import doctor2 from "@/assets/doctor2.png";
 import doctor3 from "@/assets/doctor3.png";
 import doctor4 from "@/assets/doctor4.jpg";
@@ -184,29 +185,12 @@ const GALLERY_SECTIONS = [
         alt: "Medical Certificate",
         h: "short",
       },
-
-     /*  {
-        src: doctorImg,
-        alt: "Doctor Receiving Award",
-        h: "tall",
-      },
-      {
-        src: certificate2,
+ {
+        src: certificate8,
         alt: "Medical Certificate",
         h: "short",
       },
-
-      {
-        src: certificate2,
-        alt: "Conference Participation",
-        h: "short",
-      },
-
-      {
-        src: doctorImg,
-        alt: "Achievement Ceremony",
-        h: "tall",
-      }, */
+     
     ],
   },
 

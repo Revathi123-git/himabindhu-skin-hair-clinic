@@ -16,16 +16,16 @@ declare global {
 }
 
 export const Route = createFileRoute("/testimonials")({
-  head: () => ({
-    meta: [
-      { title: "Testimonials | Real Patient Reviews" },
-      {
-        name: "description",
-        content:
-          "Read patient stories and reviews about Dr Himabindu's Skin, Hair & Aesthetics Clinic.",
-      },
-    ],
-  }),
+head: () => ({
+  title: "Testimonials | Real Patient Reviews",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Read patient stories and reviews about Dr Himabindu's Skin, Hair & Aesthetics Clinic.",
+    },
+  ],
+}),
   component: TestimonialsPage,
 });
 
