@@ -2,11 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Search, Calendar, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
-import doctorImg from "@/assets/doctor.png";
-import clinicImg from "@/assets/clinic.jpg";
+import doctorImg from "@/assets/prp.png";
+import clinicImg from "@/assets/hydra.png";
+import melasma from "@/assets/melasma.png";
+import sunscreen from "@/assets/sunscreen.png";
+import hairfall from "@/assets/hairfall.png";
 import { Reveal } from "@/components/site/Reveal";
-
-export const Route = createFileRoute("/blog")({
+import { Link } from "@tanstack/react-router";
+export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
       { title: "Blog | Skin & Hair Care Tips by Dr Himabindu" },
@@ -89,9 +92,13 @@ function BlogPage() {
                     </div>
                     <h3 className="font-display text-xl mt-4 leading-snug">{p.t}</h3>
                     <p className="mt-2 text-sm text-muted-foreground">{p.e}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
-                      Read article <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
+                   <Link
+  to="/blog/$id"
+  params={{ id: String(p.id) }}
+  className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all"
+>
+  Read article <ArrowRight className="w-3.5 h-3.5" />
+</Link>
                   </div>
                 </article>
               </Reveal>

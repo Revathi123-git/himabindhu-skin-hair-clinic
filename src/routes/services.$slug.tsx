@@ -8,7 +8,10 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { useState } from "react";
-import { SERVICES, ServiceItem } from "@/lib/services";
+
+import { SERVICES } from "@/lib/services";
+import type { Service } from "@/lib/services";
+
 import { Reveal } from "@/components/site/Reveal";
 import clinicImg from "@/assets/clinic.jpg";
 
@@ -78,7 +81,7 @@ const FAQS = [
 
 function ServiceDetailPage() {
   const { service } = Route.useLoaderData() as {
-    service: ServiceItem;
+    service: Service;
   };
 
   const [open, setOpen] = useState<number | null>(0);
@@ -154,7 +157,7 @@ function ServiceDetailPage() {
               <h2 className="font-display text-2xl">Benefits</h2>
 
               <ul className="mt-3 space-y-2">
-                {service.benefits.map((b) => (
+                {service.benefits.map((b: string) => (
                   <li
                     key={b}
                     className="flex items-start gap-2 text-foreground/80"

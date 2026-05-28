@@ -41,7 +41,7 @@ export function Footer() {
   </a>
 
   <a
-    href="https://www.facebook.com/share/1CyhYvQxRt/"
+    href="https://www.facebook.com/share/1Cj34PmkjK/"
     target="_blank"
     rel="noreferrer"
     className="w-10 h-10 rounded-full glass-dark flex items-center justify-center hover:bg-primary transition-smooth"
