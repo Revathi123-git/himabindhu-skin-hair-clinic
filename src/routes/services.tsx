@@ -2,8 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, Stethoscope } from "lucide-react";
 import { SERVICES } from "@/lib/services";
 import { Reveal } from "@/components/site/Reveal";
-import surgeryImg from "@/assets/surgery.jpg";
-import aestheticImg from "@/assets/aesthetic.jpg";
 
 
 export const Route = createFileRoute("/services")({
@@ -63,14 +61,16 @@ function ServicesPage() {
                   className="group relative block rounded-3xl overflow-hidden h-full shadow-elegant hover-lift border border-primary/20"
                 >
                   <div className="relative aspect-[5/4] overflow-hidden">
-                    <img
-                      src={surgeryImg}
-                      alt={s.title}
-                      width={1280}
-                      height={896}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
+                    <div className="relative aspect-[5/4] overflow-hidden">
+  <img
+    src={s.image}
+    alt={s.title}
+    width={1280}
+    height={896}
+    loading="lazy"
+    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+  />
+</div>
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10" />
                     <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-primary text-primary-foreground text-[10px] font-semibold tracking-[0.2em] uppercase shadow-glow">
                       Surgery
@@ -122,7 +122,7 @@ function ServicesPage() {
                 >
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <img
-                      src={aestheticImg}
+                     src={s.image}
                       alt={s.title}
                       width={1280}
                       height={896}

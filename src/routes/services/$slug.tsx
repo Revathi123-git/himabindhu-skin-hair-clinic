@@ -18,7 +18,6 @@ import clinicImg from "@/assets/clinic.jpg";
 /* =========================
    ROUTE
    ========================= */
-
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {
     const service = SERVICES.find((s) => s.slug === params.slug);

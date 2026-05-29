@@ -15,10 +15,37 @@ import {
   Stethoscope,
   Shield,
 } from "lucide-react";
-
+/* import surgeryImg from "@/assets/surgery.jpg";
+import aestheticImg from "@/assets/aesthetic.jpg"; */
+import nailSurgeryImg from "@/assets/nail.png";
+import skinBiopsyImg from "@/assets/biopsy.png";
+import earLobeRepairImg from "@/assets/ear.png";
+import  earLobeReattachImg from "@/assets/ear2.png";
+import lipomaImg from "@/assets/lipoma.png";
+import earPiercingImg from "@/assets/ear3.png";
+import skinBooster from "@/assets/booster.png";
+import rejuvinationImg from "@/assets/glow.png";
+import antiAgingImg from "@/assets/anti-aging.png";
 /* =========================
    TYPES
    ========================= */
+export const ICONS = {
+  Sparkles,
+  Sun,
+  Scissors,
+  Droplets,
+  Zap,
+  Flower2,
+  Layers,
+  Wand2,
+  Syringe,
+  ShieldCheck,
+  Waves,
+  HeartPulse,
+  Star,
+  Stethoscope,
+  Shield,
+} as const;
 
 export type HighlightStyle = "surgery" | "aesthetic" | "default";
 
@@ -26,6 +53,7 @@ export type ServiceItem = {
   slug: string;
   title: string;
   icon: any;
+  image: string;
   category: string;
   featured: boolean;
   highlightStyle: HighlightStyle;
@@ -42,72 +70,107 @@ export const SERVICES: ServiceItem[] = [
   // FEATURED SURGICAL PROCEDURES
   // =========================
 
-  {
-    slug: "ear-lobe-repair",
-    title: "Ear Lobe Repair Surgery",
-    icon: Scissors,
-    category: "Featured Surgery",
-    featured: true,
-    highlightStyle: "surgery",
-    short:
-      "Expert correction of torn, stretched, or damaged ear lobes with cosmetic precision.",
-    benefits: ["Restores natural ear shape", "Minimal scarring", "Quick recovery"],
-  },
+ {
+  slug: "ear-lobe-repair",
+  title: "Ear Lobe Repair Surgery",
+  icon: Scissors,
+ image: earLobeRepairImg, 
+  category: "Featured Surgery",
+  featured: true,
+  highlightStyle: "surgery",
+  short:
+    "Expert correction of torn, stretched, or damaged ear lobes with cosmetic precision.",
+  benefits: [
+    "Restores natural ear shape",
+    "Minimal scarring",
+    "Quick recovery",
+  ],
+},
 
-  {
-    slug: "ear-lobe-reattachment",
-    title: "Ear Lobe Reattachment",
-    icon: Shield,
-    category: "Featured Surgery",
-    featured: true,
-    highlightStyle: "surgery",
-    short: "Specialized surgical repair for split or detached ear lobes.",
-    benefits: ["Precise surgical correction", "Safe outpatient procedure", "Improved appearance"],
-  },
+{
+  slug: "ear-lobe-reattachment",
+  title: "Ear Lobe Reattachment",
+  icon: Shield,
+  image: earLobeReattachImg,
+  category: "Featured Surgery",
+  featured: true,
+  highlightStyle: "surgery",
+  short:
+    "Specialized surgical repair for split or detached ear lobes.",
+  benefits: [
+    "Precise surgical correction",
+    "Safe outpatient procedure",
+    "Improved appearance",
+  ],
+},
 
-  {
-    slug: "lipoma-removal",
-    title: "Lipoma Removal Surgery",
-    icon: Layers,
-    category: "Featured Surgery",
-    featured: true,
-    highlightStyle: "surgery",
-    short: "Safe and effective removal of fatty lumps with advanced dermatology care.",
-    benefits: ["Quick procedure", "Minimal discomfort", "Cosmetic closure techniques"],
-  },
+{
+  slug: "lipoma-removal",
+  title: "Lipoma Removal Surgery",
+  icon: Layers,
+  image: lipomaImg,
+  category: "Featured Surgery",
+  featured: true,
+  highlightStyle: "surgery",
+  short:
+    "Safe and effective removal of fatty lumps with advanced dermatology care.",
+  benefits: [
+    "Quick procedure",
+    "Minimal discomfort",
+    "Cosmetic closure techniques",
+  ],
+},
 
-  {
-    slug: "nail-surgery",
-    title: "Nail Surgery",
-    icon: Wand2,
-    category: "Featured Surgery",
-    featured: true,
-    highlightStyle: "surgery",
-    short: "Advanced nail procedures for ingrown nails, infections, and nail deformities.",
-    benefits: ["Pain relief", "Improved nail health", "Prevents recurring infection"],
-  },
+{
+  slug: "nail-surgery",
+  title: "Nail Surgery",
+  icon: Wand2,
+  image: nailSurgeryImg,
+  category: "Featured Surgery",
+  featured: true,
+  highlightStyle: "surgery",
+  short:
+    "Advanced nail procedures for ingrown nails, infections, and nail deformities.",
+  benefits: [
+    "Pain relief",
+    "Improved nail health",
+    "Prevents recurring infection",
+  ],
+},
 
-  {
-    slug: "skin-biopsy",
-    title: "Skin Biopsy",
-    icon: Stethoscope,
-    category: "Featured Surgery",
-    featured: true,
-    highlightStyle: "surgery",
-    short: "Accurate diagnostic skin biopsy procedures performed with expert precision.",
-    benefits: ["Accurate diagnosis", "Quick healing", "Expert dermatology care"],
-  },
+{
+  slug: "skin-biopsy",
+  title: "Skin Biopsy",
+  icon: Stethoscope,
+  image: skinBiopsyImg,
+  category: "Featured Surgery",
+  featured: true,
+  highlightStyle: "surgery",
+  short:
+    "Accurate diagnostic skin biopsy procedures performed with expert precision.",
+  benefits: [
+    "Accurate diagnosis",
+    "Quick healing",
+    "Expert dermatology care",
+  ],
+},
 
-  {
-    slug: "medical-ear-piercing",
-    title: "Medical Ear Piercing",
-    icon: Star,
-    category: "Featured Surgery",
-    featured: true,
-    highlightStyle: "surgery",
-    short: "Safe and hygienic dermatologist-supervised ear piercing procedure.",
-    benefits: ["Sterile technique", "Minimal pain", "Reduced infection risk"],
-  },
+{
+  slug: "medical-ear-piercing",
+  title: "Medical Ear Piercing",
+  icon: Star,
+  image: earPiercingImg,
+  category: "Featured Surgery",
+  featured: true,
+  highlightStyle: "surgery",
+  short:
+    "Safe and hygienic dermatologist-supervised ear piercing procedure.",
+  benefits: [
+    "Sterile technique",
+    "Minimal pain",
+    "Reduced infection risk",
+  ],
+},
 
   // =========================
   // FEATURED SKIN BOOSTERS
@@ -117,6 +180,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "skin-boosters",
     title: "Skin Boosters",
     icon: Sparkles,
+    image: skinBooster,
     category: "Featured Aesthetic",
     featured: true,
     highlightStyle: "aesthetic",
@@ -128,6 +192,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "glow-rejuvenation",
     title: "Glow & Rejuvenation Therapy",
     icon: Sun,
+    image: rejuvinationImg,
     category: "Featured Aesthetic",
     featured: true,
     highlightStyle: "aesthetic",
@@ -139,6 +204,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "anti-aging-injectables",
     title: "Anti-Aging Injectables",
     icon: Syringe,
+    image: antiAgingImg,
     category: "Featured Aesthetic",
     featured: true,
     highlightStyle: "aesthetic",
@@ -150,21 +216,23 @@ export const SERVICES: ServiceItem[] = [
   // SKIN & HAIR TREATMENTS
   // =========================
 
-  {
+  /* {
     slug: "acne-treatment",
     title: "Acne Treatment",
     icon: ShieldCheck,
+    image: earPiercingImg,
     category: "Skin Treatment",
     featured: false,
     highlightStyle: "default",
     short: "Targeted therapies for active acne, scars, and breakouts.",
     benefits: ["Clear, balanced skin", "Reduced inflammation", "Scar prevention"],
-  },
+  }, */
 
   {
     slug: "pigmentation",
     title: "Pigmentation Treatment",
     icon: Sun,
+    image: earPiercingImg,
     category: "Skin Treatment",
     featured: false,
     highlightStyle: "default",
@@ -176,6 +244,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "hair-fall",
     title: "Hair Fall Treatment",
     icon: Scissors,
+    image: earPiercingImg,
     category: "Hair Treatment",
     featured: false,
     highlightStyle: "default",
@@ -187,6 +256,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "prp-therapy",
     title: "PRP Therapy",
     icon: Droplets,
+    image: earPiercingImg,
     category: "Hair Treatment",
     featured: false,
     highlightStyle: "default",
@@ -198,6 +268,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "laser-hair-reduction",
     title: "Laser Hair Reduction",
     icon: Zap,
+    image: earPiercingImg,
     category: "Laser Treatment",
     featured: false,
     highlightStyle: "default",
@@ -205,21 +276,23 @@ export const SERVICES: ServiceItem[] = [
     benefits: ["Smooth skin", "Painless sessions", "Suitable for all skin tones"],
   },
 
-  {
+ /*  {
     slug: "anti-aging",
     title: "Anti-Aging Treatments",
     icon: Flower2,
+    image: earPiercingImg,
     category: "Aesthetic Treatment",
     featured: false,
     highlightStyle: "default",
     short: "Advanced therapies to restore youthful skin and elasticity.",
     benefits: ["Firmer skin", "Reduced fine lines", "Radiant glow"],
-  },
+  }, */
 
   {
     slug: "chemical-peels",
     title: "Chemical Peels",
     icon: Layers,
+    image: earPiercingImg,
     category: "Skin Treatment",
     featured: false,
     highlightStyle: "default",
@@ -227,21 +300,23 @@ export const SERVICES: ServiceItem[] = [
     benefits: ["Smoother texture", "Brighter tone", "Minimal downtime"],
   },
 
-  {
+ /*  {
     slug: "skin-rejuvenation",
     title: "Skin Rejuvenation",
     icon: Sparkles,
+    image: earPiercingImg,
     category: "Aesthetic Treatment",
     featured: false,
     highlightStyle: "default",
     short: "Personalized skin rejuvenation for healthy radiant skin.",
     benefits: ["Healthy radiance", "Even tone", "Refined pores"],
-  },
+  }, */
 
   {
     slug: "botox-fillers",
     title: "Botox & Fillers",
     icon: Syringe,
+    image: earPiercingImg,
     category: "Aesthetic Treatment",
     featured: false,
     highlightStyle: "default",
@@ -253,6 +328,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "scar-reduction",
     title: "Scar Reduction",
     icon: Wand2,
+    image: earPiercingImg,
     category: "Skin Treatment",
     featured: false,
     highlightStyle: "default",
@@ -264,6 +340,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "hydra-facial",
     title: "Hydra Facial",
     icon: Waves,
+    image: earPiercingImg,
     category: "Facial Treatment",
     featured: false,
     highlightStyle: "default",
@@ -275,6 +352,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "hair-regrowth",
     title: "Hair Regrowth Therapy",
     icon: HeartPulse,
+    image: earPiercingImg,
     category: "Hair Treatment",
     featured: false,
     highlightStyle: "default",

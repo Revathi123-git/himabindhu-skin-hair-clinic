@@ -17,7 +17,7 @@ import { Route as AppointmentRouteImport } from './routes/appointment'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
-import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
+import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
 import { Route as BlogIdRouteImport } from './routes/blog/$id'
 
 const TestimonialsRoute = TestimonialsRouteImport.update({
