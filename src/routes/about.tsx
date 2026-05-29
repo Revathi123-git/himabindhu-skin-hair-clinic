@@ -99,8 +99,8 @@ function AboutPage() {
           <Reveal><SectionHeading eyebrow="Journey" title="Milestones along the way" /></Reveal>
           <div className="space-y-8 relative before:absolute before:left-4 md:before:left-1/2 before:top-0 before:bottom-0 before:w-px before:bg-border">
             {[
-              { y: "2010", t: "MBBS Graduation", d: "Began the journey in medicine with strong foundations." },
-              { y: "2014", t: "DDVL Specialization", d: "Specialized in Dermatology, Venereology & Leprology." },
+              { y: "2006", t: "MBBS Graduation", d: "Began the journey in medicine with strong foundations." },
+              { y: "2012", t: "DDVL Specialization", d: "Specialized in Dermatology, Venereology & Leprology." },
               { y: "2019", t: "Clinic Established", d: "Founded Dr Himabindu's Skin, Hair & Aesthetics Clinic." },
               { y: "2023", t: "10,000+ Patients", d: "Crossed 10,000 happy patients with consistent 4.9★ ratings." },
               { y: "Today", t: "14+ Years Strong", d: "Continuing to evolve with the latest in dermatology." },

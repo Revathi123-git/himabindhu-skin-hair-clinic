@@ -20,12 +20,15 @@ import aestheticImg from "@/assets/aesthetic.jpg"; */
 import nailSurgeryImg from "@/assets/nail.png";
 import skinBiopsyImg from "@/assets/biopsy.png";
 import earLobeRepairImg from "@/assets/ear.png";
-import  earLobeReattachImg from "@/assets/ear2.png";
+import sebaceousCystImg from "@/assets/ear2.png";
 import lipomaImg from "@/assets/lipoma.png";
 import earPiercingImg from "@/assets/ear3.png";
 import skinBooster from "@/assets/booster.png";
 import rejuvinationImg from "@/assets/glow.png";
 import antiAgingImg from "@/assets/anti-aging.png";
+import stretchMarksImg from "@/assets/stretch.png";
+import accidentalScarImg from "@/assets/accident.png";
+import surgicalScarImg from "@/assets/surgical.png"
 /* =========================
    TYPES
    ========================= */
@@ -88,19 +91,19 @@ export const SERVICES: ServiceItem[] = [
 },
 
 {
-  slug: "ear-lobe-reattachment",
-  title: "Ear Lobe Reattachment",
+  slug: "sebaceous-cyst-removal",
+  title: "Sebaceous Cyst Removal",
   icon: Shield,
-  image: earLobeReattachImg,
+  image: sebaceousCystImg,
   category: "Featured Surgery",
   featured: true,
   highlightStyle: "surgery",
   short:
-    "Specialized surgical repair for split or detached ear lobes.",
+    "Safe and effective removal of sebaceous cysts with minimal scarring.",
   benefits: [
-    "Precise surgical correction",
-    "Safe outpatient procedure",
-    "Improved appearance",
+    "Quick outpatient procedure",
+    "Minimal discomfort",
+    "Reduced risk of recurrence",
   ],
 },
 
@@ -216,7 +219,7 @@ export const SERVICES: ServiceItem[] = [
   // SKIN & HAIR TREATMENTS
   // =========================
 
-  /* {
+   {
     slug: "acne-treatment",
     title: "Acne Treatment",
     icon: ShieldCheck,
@@ -226,7 +229,7 @@ export const SERVICES: ServiceItem[] = [
     highlightStyle: "default",
     short: "Targeted therapies for active acne, scars, and breakouts.",
     benefits: ["Clear, balanced skin", "Reduced inflammation", "Scar prevention"],
-  }, */
+  }, 
 
   {
     slug: "pigmentation",
@@ -324,17 +327,54 @@ export const SERVICES: ServiceItem[] = [
     benefits: ["Wrinkle reduction", "Volume restoration", "Youthful appearance"],
   },
 
-  {
-    slug: "scar-reduction",
-    title: "Scar Reduction",
-    icon: Wand2,
-    image: earPiercingImg,
-    category: "Skin Treatment",
-    featured: false,
-    highlightStyle: "default",
-    short: "Advanced microneedling, laser, and subcision treatments for scars.",
-    benefits: ["Smoother skin surface", "Improved tone", "Boosted confidence"],
-  },
+ {
+  slug: "accidental-scars",
+  title: "Accidental Scars",
+  icon: Wand2,
+  image: accidentalScarImg,
+  category: "Skin Treatment",
+  featured: false,
+  highlightStyle: "default",
+  short:
+    "Advanced treatments to reduce the appearance of accidental injury scars.",
+  benefits: [
+    "Improved skin texture",
+    "Reduced scar visibility",
+    "Enhanced confidence",
+  ],
+},
+{
+  slug: "surgical-scars",
+  title: "Surgical Scars",
+  icon: Wand2,
+  image: surgicalScarImg,
+  category: "Skin Treatment",
+  featured: false,
+  highlightStyle: "default",
+  short:
+    "Specialized scar revision treatments for post-surgical marks and scars.",
+  benefits: [
+    "Smoother skin appearance",
+    "Reduced discoloration",
+    "Better scar blending",
+  ],
+},
+{
+  slug: "stretch-marks",
+  title: "Stretch Marks Treatment",
+  icon: Wand2,
+  image: stretchMarksImg,
+  category: "Skin Treatment",
+  featured: false,
+  highlightStyle: "default",
+  short:
+    "Effective therapies to minimize stretch marks and improve skin elasticity.",
+  benefits: [
+    "Improved skin texture",
+    "Reduced stretch mark appearance",
+    "Healthier-looking skin",
+  ],
+},
 
   {
     slug: "hydra-facial",
