@@ -6,6 +6,7 @@ import doctorImg from "@/assets/prp.png";
 import clinicImg from "@/assets/hydra.png";
 import melasma from "@/assets/melasma.png";
 import sunscreen from "@/assets/sunscreen.png";
+import hydra from "@/assets/hydra.png";
 import hairfall from "@/assets/hairfall.png";
 import { Reveal } from "@/components/site/Reveal";
 import { Link } from "@tanstack/react-router";
@@ -22,10 +23,10 @@ export const Route = createFileRoute("/blog/")({
 const POSTS = [
   { id: 1, c: "Skin Care", t: "10 Daily Habits for Glowing Skin", e: "Simple, dermatologist-approved routines that transform your skin in weeks.", img: heroImg, d: "May 2, 2026" },
   { id: 2, c: "Hair Care", t: "PRP for Hair Loss: What to Expect", e: "Everything about platelet-rich plasma therapy — sessions, results, safety.", img: doctorImg, d: "Apr 24, 2026" },
-  { id: 3, c: "Aesthetics", t: "Hydra Facial vs Chemical Peel — Which is Right for You?", e: "Compare benefits, downtime, and ideal candidates for both treatments.", img: clinicImg, d: "Apr 18, 2026" },
-  { id: 4, c: "Skin Care", t: "Understanding Melasma: Causes & Solutions", e: "A complete guide to managing pigmentation safely and effectively.", img: heroImg, d: "Apr 10, 2026" },
-  { id: 5, c: "Education", t: "Sunscreen 101: Picking the Right SPF", e: "What every Indian skin type should know about sun protection.", img: clinicImg, d: "Mar 28, 2026" },
-  { id: 6, c: "Hair Care", t: "Why Hair Falls in Monsoon (and How to Stop It)", e: "Seasonal hair fall — explained by a dermatologist.", img: doctorImg, d: "Mar 19, 2026" },
+  { id: 3, c: "Aesthetics", t: "Hydra Facial vs Chemical Peel — Which is Right for You?", e: "Compare benefits, downtime, and ideal candidates for both treatments.", img: hydra, d: "Apr 18, 2026" },
+  { id: 4, c: "Skin Care", t: "Understanding Melasma: Causes & Solutions", e: "A complete guide to managing pigmentation safely and effectively.", img: melasma, d: "Apr 10, 2026" },
+  { id: 5, c: "Education", t: "Sunscreen 101: Picking the Right SPF", e: "What every Indian skin type should know about sun protection.", img: sunscreen, d: "Mar 28, 2026" },
+  { id: 6, c: "Hair Care", t: "Why Hair Falls in Monsoon (and How to Stop It)", e: "Seasonal hair fall — explained by a dermatologist.", img: hairfall  , d: "Mar 19, 2026" },
 ];
 
 const CATEGORIES = ["All", "Skin Care", "Hair Care", "Aesthetics", "Education"];

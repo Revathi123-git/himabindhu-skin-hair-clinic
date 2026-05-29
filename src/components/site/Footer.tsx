@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react";
 import { CLINIC, MAIL_URL, TEL_URL, WHATSAPP_URL } from "@/lib/clinic";
-
+import logo from "../../assets/logo.jpg";
 export function Footer() {
   return (
     <footer className="relative mt-24 bg-foreground text-background">
@@ -10,9 +10,22 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-12 h-12 rounded-full gradient-hero flex items-center justify-center shadow-glow">
-                <span className="font-display text-primary-foreground text-xl font-bold">H</span>
-              </div>
+<div className="relative w-11 h-11 rounded-full gradient-hero flex items-center justify-center shadow-glow">
+           <div className="w-14 h-14 rounded-full overflow-hidden shadow-glow ring-2 ring-primary/30">
+  <img
+    src={logo}
+    alt="Dr Himabindu Logo"
+     style={{
+    width: "50px",
+    height: "50px",
+    borderRadius: "50%",
+    objectFit: "cover"
+  }}
+    className="w-full h-full object-cover"
+  />
+</div>
+          </div>
+
               <div>
                 <div className="font-display text-lg">Dr Himabindu's</div>
                 <div className="text-[11px] tracking-[0.2em] uppercase opacity-70">Skin · Hair · Aesthetics</div>

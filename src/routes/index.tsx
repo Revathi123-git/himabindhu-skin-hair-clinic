@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import doctorImg from "@/assets/doctor.png";
-import clinicImg from "@/assets/clinic.jpg";
+import clinicImg from "@/assets/clinic7.png";
 import { CLINIC, WHATSAPP_URL } from "@/lib/clinic";
 import { SERVICES } from "@/lib/services";
 import { Reveal, SectionHeading } from "@/components/site/Reveal";
@@ -307,10 +307,22 @@ function HomePage() {
           <Reveal><SectionHeading eyebrow="Patient Stories" title="Loved by thousands across the city" /></Reveal>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { n: "Priya R.", t: "Acne Treatment", q: "I struggled with acne for years. After 4 months at this clinic, my skin is clear and glowing. Forever grateful to Dr. Himabindu!" },
-              { n: "Rohit K.", t: "Hair PRP", q: "Genuine, ethical advice and visible regrowth. The team explains everything beautifully — best decision I made." },
-              { n: "Sneha M.", t: "Hydra Facial", q: "The clinic feels like a luxury spa. My skin has never felt this hydrated and radiant. Highly recommend." },
-            ].map((rev, i) => (
+  {
+    n: "Anonymous001",
+    t: "Hair Regrowth Treatment",
+    q: "Almost 5 months into my treatment and most of my hair near the crown is back. Great doctor who constantly supports you throughout the treatment. There are many other procedures available as well based on Dr. Himabindu’s suggestions.",
+  },
+  {
+    n: "Urvish Markad",
+    t: "Skin Treatment",
+    q: "I have been consulting Dr. Himabindu for a long time now for all of my skin-related problems and have always received the right solution. The doctor attentively listens to my concerns first and then recommends the appropriate treatment.",
+  },
+  {
+    n: "Vanyakanthu",
+    t: "Dermatology Consultation",
+    q: "The doctor understands the problem very well and suggested medicines that helped me recover. The staff are polite and professional. Highly recommend this skin clinic.",
+  },
+].map((rev, i) => (
               <Reveal key={rev.n} delay={i * 0.1}>
                 <div className="h-full p-7 rounded-3xl bg-card border border-border/60 hover-lift">
                   <div className="flex text-gold mb-4">{[...Array(5)].map((_,j) => <Star key={j} className="w-4 h-4 fill-current" />)}</div>
@@ -323,7 +335,13 @@ function HomePage() {
               </Reveal>
             ))}
           </div>
+           <div className="mt-12 text-center">
+            <Link to="/services" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full glass text-foreground font-medium hover-lift">
+              View all<ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
+         
       </section>
 
       {/* CTA */}

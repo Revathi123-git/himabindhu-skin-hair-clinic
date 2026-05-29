@@ -26,8 +26,8 @@ import earPiercingImg from "@/assets/ear3.png";
 import skinBooster from "@/assets/booster.png";
 import rejuvinationImg from "@/assets/glow.png";
 import antiAgingImg from "@/assets/anti-aging.png";
-import stretchMarksImg from "@/assets/stretch.png";
-import accidentalScarImg from "@/assets/accident.png";
+
+
 import surgicalScarImg from "@/assets/surgical.png"
 /* =========================
    TYPES
@@ -219,18 +219,24 @@ export const SERVICES: ServiceItem[] = [
   // SKIN & HAIR TREATMENTS
   // =========================
 
-   {
-    slug: "acne-treatment",
-    title: "Acne Treatment",
-    icon: ShieldCheck,
-    image: earPiercingImg,
-    category: "Skin Treatment",
-    featured: false,
-    highlightStyle: "default",
-    short: "Targeted therapies for active acne, scars, and breakouts.",
-    benefits: ["Clear, balanced skin", "Reduced inflammation", "Scar prevention"],
-  }, 
+ 
 
+   {
+  slug: "scar-reduction",
+  title: "Scar Reduction",
+  icon: Wand2,
+  image: surgicalScarImg,
+  category: "Skin Treatment",
+  featured: false,
+  highlightStyle: "default",
+  short:
+    "Advanced scar reduction treatments for acne scars, accidental scars, surgical scars, and stretch marks to improve skin texture and appearance.",
+  benefits: [
+    "Reduced accidental scar visibility",
+    "Improved appearance of surgical scars",
+    "Minimized stretch marks",
+  ],
+},
   {
     slug: "pigmentation",
     title: "Pigmentation Treatment",
@@ -279,17 +285,7 @@ export const SERVICES: ServiceItem[] = [
     benefits: ["Smooth skin", "Painless sessions", "Suitable for all skin tones"],
   },
 
- /*  {
-    slug: "anti-aging",
-    title: "Anti-Aging Treatments",
-    icon: Flower2,
-    image: earPiercingImg,
-    category: "Aesthetic Treatment",
-    featured: false,
-    highlightStyle: "default",
-    short: "Advanced therapies to restore youthful skin and elasticity.",
-    benefits: ["Firmer skin", "Reduced fine lines", "Radiant glow"],
-  }, */
+
 
   {
     slug: "chemical-peels",
@@ -303,17 +299,6 @@ export const SERVICES: ServiceItem[] = [
     benefits: ["Smoother texture", "Brighter tone", "Minimal downtime"],
   },
 
- /*  {
-    slug: "skin-rejuvenation",
-    title: "Skin Rejuvenation",
-    icon: Sparkles,
-    image: earPiercingImg,
-    category: "Aesthetic Treatment",
-    featured: false,
-    highlightStyle: "default",
-    short: "Personalized skin rejuvenation for healthy radiant skin.",
-    benefits: ["Healthy radiance", "Even tone", "Refined pores"],
-  }, */
 
   {
     slug: "botox-fillers",
@@ -327,54 +312,6 @@ export const SERVICES: ServiceItem[] = [
     benefits: ["Wrinkle reduction", "Volume restoration", "Youthful appearance"],
   },
 
- {
-  slug: "accidental-scars",
-  title: "Accidental Scars",
-  icon: Wand2,
-  image: accidentalScarImg,
-  category: "Skin Treatment",
-  featured: false,
-  highlightStyle: "default",
-  short:
-    "Advanced treatments to reduce the appearance of accidental injury scars.",
-  benefits: [
-    "Improved skin texture",
-    "Reduced scar visibility",
-    "Enhanced confidence",
-  ],
-},
-{
-  slug: "surgical-scars",
-  title: "Surgical Scars",
-  icon: Wand2,
-  image: surgicalScarImg,
-  category: "Skin Treatment",
-  featured: false,
-  highlightStyle: "default",
-  short:
-    "Specialized scar revision treatments for post-surgical marks and scars.",
-  benefits: [
-    "Smoother skin appearance",
-    "Reduced discoloration",
-    "Better scar blending",
-  ],
-},
-{
-  slug: "stretch-marks",
-  title: "Stretch Marks Treatment",
-  icon: Wand2,
-  image: stretchMarksImg,
-  category: "Skin Treatment",
-  featured: false,
-  highlightStyle: "default",
-  short:
-    "Effective therapies to minimize stretch marks and improve skin elasticity.",
-  benefits: [
-    "Improved skin texture",
-    "Reduced stretch mark appearance",
-    "Healthier-looking skin",
-  ],
-},
 
   {
     slug: "hydra-facial",

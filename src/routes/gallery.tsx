@@ -38,7 +38,7 @@ import doctor2 from "@/assets/doctor2.png";
 import doctor3 from "@/assets/doctor3.png";
 import doctor4 from "@/assets/doctor4.jpg";
 
-
+import hifu from "@/assets/hifu.png";
 
 
 import staffImg from "@/assets/hero.jpg";
@@ -145,6 +145,19 @@ const GALLERY_SECTIONS = [
         alt: "Hair Treatment Equipment",
         h: "tall",
       },
+      
+      {
+        src: clinicImg9,
+        alt: "Hair Treatment Equipment",
+        h: "tall",
+      },
+       {
+        src:  hifu,
+        alt: "skinb Treatment Equipment",
+        h: "tall",
+      },
+        
+
     ],
   },
 
