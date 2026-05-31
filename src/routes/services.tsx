@@ -56,7 +56,7 @@ function ServicesPage() {
             {surgeries.map((s, i) => (
               <Reveal key={s.slug} delay={(i % 3) * 0.08}>
                 <Link
-                  to="/services/$slug"
+                  to="/serv/$slug"
                   params={{ slug: s.slug }}
                   className="group relative block rounded-3xl overflow-hidden h-full shadow-elegant hover-lift border border-primary/20"
                 >
@@ -116,7 +116,7 @@ function ServicesPage() {
             {aesthetics.map((s, i) => (
               <Reveal key={s.slug} delay={(i % 3) * 0.08}>
                 <Link
-                  to="/services/$slug"
+                  to="/serv/$slug"
                   params={{ slug: s.slug }}
                   className="group relative block rounded-3xl overflow-hidden h-full shadow-elegant hover-lift"
                 >
@@ -159,7 +159,7 @@ function ServicesPage() {
             {rest.map((s, i) => (
               <Reveal key={s.slug} delay={(i % 3) * 0.06}>
                 <Link
-                  to="/services/$slug"
+                  to="/serv/$slug"
                   params={{ slug: s.slug }}
                   className="group block p-7 rounded-3xl bg-card border border-border/60 hover-lift h-full"
                 >

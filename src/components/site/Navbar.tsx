@@ -36,7 +36,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-smooth ${
-        transparent ? "bg-transparent" : "glass shadow-soft"
+        transparent ? "glass shadow-soft" : "glass shadow-soft"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 lg:px-8 h-18 py-3">

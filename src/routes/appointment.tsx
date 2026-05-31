@@ -60,7 +60,7 @@ function AppointmentPage() {
       </section>
 
       <section className="py-16">
-        <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-3 gap-10">
+       <div className="container mx-auto px-4 lg:px-8 flex justify-center gap-12">
           <Reveal>
             <div className="space-y-5">
               <div className="p-6 rounded-3xl bg-card border border-border/60">
