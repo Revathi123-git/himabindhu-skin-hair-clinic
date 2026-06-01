@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Search, Calendar, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import doctorImg from "@/assets/prp.png";
-import clinicImg from "@/assets/hydra.png";
+
 import melasma from "@/assets/melasma.png";
 import sunscreen from "@/assets/sunscreen.png";
 import hydra from "@/assets/hydra.png";

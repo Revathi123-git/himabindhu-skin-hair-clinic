@@ -15,8 +15,7 @@ import {
   Stethoscope,
   Shield,
 } from "lucide-react";
-/* import surgeryImg from "@/assets/surgery.jpg";
-import aestheticImg from "@/assets/aesthetic.jpg"; */
+
 import nailSurgeryImg from "@/assets/nail.png";
 import skinBiopsyImg from "@/assets/biopsy.png";
 import earLobeRepairImg from "@/assets/ear.png";
@@ -26,9 +25,15 @@ import earPiercingImg from "@/assets/ear3.png";
 import skinBooster from "@/assets/booster.png";
 import rejuvinationImg from "@/assets/glow.png";
 import antiAgingImg from "@/assets/anti-aging.png";
-
-
+import hairfall from "@/assets/hairfall.png"
+import prp from "@/assets/prp.png"
+import laser from "@/assets/laser.png"
 import surgicalScarImg from "@/assets/surgical.png"
+import pigm from "@/assets/pigm.png"
+import chemical from "@/assets/chemical.png"
+import botox from "@/assets/botox.png"
+import hydra from "@/assets/hydra.png"
+import hair from "@/assets/hair.png"
 /* =========================
    TYPES
    ========================= */
@@ -69,9 +74,6 @@ export type ServiceItem = {
    ========================= */
 
 export const SERVICES: ServiceItem[] = [
-  // =========================
-  // FEATURED SURGICAL PROCEDURES
-  // =========================
 
  {
   slug: "ear-lobe-repair",
@@ -241,7 +243,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "pigmentation",
     title: "Pigmentation Treatment",
     icon: Sun,
-    image: earPiercingImg,
+    image: pigm,
     category: "Skin Treatment",
     featured: false,
     highlightStyle: "default",
@@ -253,7 +255,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "hair-fall",
     title: "Hair Fall Treatment",
     icon: Scissors,
-    image: earPiercingImg,
+    image: hairfall,
     category: "Hair Treatment",
     featured: false,
     highlightStyle: "default",
@@ -265,7 +267,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "prp-therapy",
     title: "PRP Therapy",
     icon: Droplets,
-    image: earPiercingImg,
+    image: prp,
     category: "Hair Treatment",
     featured: false,
     highlightStyle: "default",
@@ -277,7 +279,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "laser-hair-reduction",
     title: "Laser Hair Reduction",
     icon: Zap,
-    image: earPiercingImg,
+    image: laser,
     category: "Laser Treatment",
     featured: false,
     highlightStyle: "default",
@@ -291,7 +293,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "chemical-peels",
     title: "Chemical Peels",
     icon: Layers,
-    image: earPiercingImg,
+    image: chemical,
     category: "Skin Treatment",
     featured: false,
     highlightStyle: "default",
@@ -304,7 +306,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "botox-fillers",
     title: "Botox & Fillers",
     icon: Syringe,
-    image: earPiercingImg,
+    image: botox,
     category: "Aesthetic Treatment",
     featured: false,
     highlightStyle: "default",
@@ -317,7 +319,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "hydra-facial",
     title: "Hydra Facial",
     icon: Waves,
-    image: earPiercingImg,
+    image: hydra,
     category: "Facial Treatment",
     featured: false,
     highlightStyle: "default",
@@ -328,8 +330,8 @@ export const SERVICES: ServiceItem[] = [
   {
     slug: "hair-regrowth",
     title: "Hair Regrowth Therapy",
-    icon: HeartPulse,
-    image: earPiercingImg,
+    icon: Scissors,
+    image: hair,
     category: "Hair Treatment",
     featured: false,
     highlightStyle: "default",

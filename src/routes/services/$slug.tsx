@@ -13,33 +13,44 @@ import { SERVICES } from "@/lib/services";
 import type { Service } from "@/lib/services";
 
 import { Reveal } from "@/components/site/Reveal";
-import clinicImg from "@/assets/clinic.jpg";
+
 
 /* =========================
    ROUTE
    ========================= */
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {
-    const service = SERVICES.find((s) => s.slug === params.slug);
+    const service = SERVICES.find(
+      (s) => s.slug === params.slug
+    );
 
-    if (!service) throw notFound();
+    if (!service) {
+      throw notFound();
+    }
 
     return { service };
   },
 
-  head: ({ loaderData }) => ({
-    meta: [
-      {
-        title: `${loaderData?.service.title} | Dr Himabindu's Clinic`,
-      },
-      {
-        name: "description",
-        content: loaderData?.service.short ?? "",
-      },
-    ],
-  }),
+  head: ({ loaderData }) => {
+    const service = loaderData?.service;
+
+    return {
+      meta: [
+        {
+          title: service
+            ? `${service.title} | Dr Himabindu's Clinic`
+            : "Service | Dr Himabindu's Clinic",
+        },
+        {
+          name: "description",
+          content: service?.short ?? "",
+        },
+      ],
+    };
+  },
 
   component: ServiceDetailPage,
+
 
   notFoundComponent: () => (
     <div className="pt-40 pb-20 text-center">
@@ -124,12 +135,12 @@ function ServiceDetailPage() {
 
             {/* IMAGE */}
             <div className="relative aspect-[5/4] rounded-3xl overflow-hidden shadow-elegant">
-              <img
-                src={clinicImg}
-                alt={service.title}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+ <img
+  src={service?.image}
+  alt={service.title}
+  className="w-full h-full object-cover"
+  loading="lazy"
+/>
             </div>
           </div>
         </div>

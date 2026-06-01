@@ -3,12 +3,15 @@ import { ArrowRight, Sparkles, Stethoscope } from "lucide-react";
 import { SERVICES } from "@/lib/services";
 import { Reveal } from "@/components/site/Reveal";
 
-
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Services | Skin, Hair, Laser & Aesthetic Treatments" },
-      { name: "description", content: "Featured dermatology surgeries, advanced lasers, hair regrowth and luxury aesthetic treatments by Dr. M. Himabindu." },
+      {
+        name: "description",
+        content:
+          "Featured dermatology surgeries, advanced lasers, hair regrowth and luxury aesthetic treatments by Dr. M. Himabindu.",
+      },
     ],
   }),
   component: ServicesPage,
@@ -56,7 +59,7 @@ function ServicesPage() {
             {surgeries.map((s, i) => (
               <Reveal key={s.slug} delay={(i % 3) * 0.08}>
                 <Link
-                  to="/serv/$slug"
+                  to="/services/$slug"
                   params={{ slug: s.slug }}
                   className="group relative block rounded-3xl overflow-hidden h-full shadow-elegant hover-lift border border-primary/20"
                 >
@@ -116,7 +119,7 @@ function ServicesPage() {
             {aesthetics.map((s, i) => (
               <Reveal key={s.slug} delay={(i % 3) * 0.08}>
                 <Link
-                  to="/serv/$slug"
+                  to="/services/$slug"
                   params={{ slug: s.slug }}
                   className="group relative block rounded-3xl overflow-hidden h-full shadow-elegant hover-lift"
                 >
@@ -159,7 +162,7 @@ function ServicesPage() {
             {rest.map((s, i) => (
               <Reveal key={s.slug} delay={(i % 3) * 0.06}>
                 <Link
-                  to="/serv/$slug"
+                  to="/services/$slug"
                   params={{ slug: s.slug }}
                   className="group block p-7 rounded-3xl bg-card border border-border/60 hover-lift h-full"
                 >
