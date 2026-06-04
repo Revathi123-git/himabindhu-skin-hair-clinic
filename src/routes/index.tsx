@@ -11,6 +11,8 @@ import { CLINIC, WHATSAPP_URL } from "@/lib/clinic";
 import { SERVICES } from "@/lib/services";
 import { Reveal, SectionHeading } from "@/components/site/Reveal";
 
+
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
