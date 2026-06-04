@@ -37,6 +37,58 @@ function ServicesPage() {
           </Reveal>
         </div>
       </section>
+         {/* FEATURED AESTHETICS */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <Reveal>
+            <div className="flex items-center gap-2 text-primary">
+              <Sparkles className="w-5 h-5" />
+              <span className="text-xs font-semibold tracking-[0.25em] uppercase">Signature Aesthetics</span>
+            </div>
+                      
+           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mt-3">
+            <h2 className="font-display text-3xl md:text-5xl mt-3 max-w-2xl">Premium aesthetic experiences</h2>
+   <p className="text-muted-foreground max-w-md">
+                In-office procedures performed personally by Dr. Himabindu with precision suturing and cosmetic finesse.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {aesthetics.map((s, i) => (
+              <Reveal key={s.slug} delay={(i % 3) * 0.08}>
+                <Link
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
+                  className="group relative block rounded-3xl overflow-hidden h-full shadow-elegant hover-lift"
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <img
+                     src={s.image}
+                      alt={s.title}
+                      width={1280}
+                      height={896}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-6">
+                      <div className="w-11 h-11 rounded-2xl gradient-hero flex items-center justify-center mb-4 shadow-glow">
+                        <s.icon className="w-5 h-5 text-primary-foreground" />
+                      </div>
+                      <h3 className="font-display text-2xl">{s.title}</h3>
+                      <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{s.short}</p>
+                      <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
+                        Learn more <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* FEATURED SURGERIES */}
       <section className="py-20 relative overflow-hidden">
@@ -104,52 +156,7 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* FEATURED AESTHETICS */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 lg:px-8">
-          <Reveal>
-            <div className="flex items-center gap-2 text-primary">
-              <Sparkles className="w-5 h-5" />
-              <span className="text-xs font-semibold tracking-[0.25em] uppercase">Signature Aesthetics</span>
-            </div>
-            <h2 className="font-display text-3xl md:text-5xl mt-3 max-w-2xl">Premium aesthetic experiences</h2>
-          </Reveal>
-
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
-            {aesthetics.map((s, i) => (
-              <Reveal key={s.slug} delay={(i % 3) * 0.08}>
-                <Link
-                  to="/services/$slug"
-                  params={{ slug: s.slug }}
-                  className="group relative block rounded-3xl overflow-hidden h-full shadow-elegant hover-lift"
-                >
-                  <div className="relative aspect-[4/5] overflow-hidden">
-                    <img
-                     src={s.image}
-                      alt={s.title}
-                      width={1280}
-                      height={896}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-                    <div className="absolute inset-x-0 bottom-0 p-6">
-                      <div className="w-11 h-11 rounded-2xl gradient-hero flex items-center justify-center mb-4 shadow-glow">
-                        <s.icon className="w-5 h-5 text-primary-foreground" />
-                      </div>
-                      <h3 className="font-display text-2xl">{s.title}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{s.short}</p>
-                      <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
-                        Learn more <ArrowRight className="w-3.5 h-3.5" />
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+   
 
       {/* ALL OTHER TREATMENTS */}
       <section className="py-20">

@@ -24,15 +24,41 @@ const CARDS = [
 
 function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (form.name.trim().length < 2 || !form.email.includes("@") || form.message.trim().length < 5) {
-      toast.error("Please fill in all fields correctly.");
-      return;
-    }
-    toast.success("Message sent! We'll respond within 24 hours.");
-    setForm({ name: "", email: "", message: "" });
-  };
+const submit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (
+    form.name.trim().length < 2 ||
+    !form.email.includes("@") ||
+    form.message.trim().length < 5
+  ) {
+    toast.error("Please fill in all fields correctly.");
+    return;
+  }
+
+  const message = `
+*New Contact Form Submission*
+
+👤 Name: ${form.name}
+📧 Email: ${form.email}
+
+💬 Message:
+${form.message}
+`;
+
+  window.open(
+    `${WHATSAPP_URL}?text=${encodeURIComponent(message)}`,
+    "_blank"
+  );
+
+  toast.success("Opening WhatsApp...");
+
+  setForm({
+    name: "",
+    email: "",
+    message: "",
+  });
+};
 
   return (
     <div>
@@ -93,7 +119,7 @@ function ContactPage() {
               <input value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} type="email" placeholder="Email address" maxLength={120} className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary" />
               <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} rows={5} placeholder="Your message" maxLength={500} className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary" />
               <button type="submit" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full gradient-hero text-primary-foreground font-medium shadow-soft hover:shadow-glow transition-smooth">
-                <Send className="w-4 h-4" /> Send Message
+                <Send className="w-4 h-4" /> Send Message via WhatsApp
               </button>
             </form>
           </Reveal>

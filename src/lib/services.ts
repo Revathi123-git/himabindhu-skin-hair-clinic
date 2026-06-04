@@ -34,6 +34,9 @@ import chemical from "@/assets/chemical.png"
 import botox from "@/assets/botox.png"
 import hydra from "@/assets/hydra.png"
 import hair from "@/assets/hair.png"
+import hifu1 from "@/assets/hifu1.png"
+import filers from "@/assets/fillers.png"
+import skinDiseases from "@/assets/skin.png"
 /* =========================
    TYPES
    ========================= */
@@ -193,6 +196,54 @@ export const SERVICES: ServiceItem[] = [
     benefits: ["Deep hydration", "Glass skin glow", "Improved skin texture"],
   },
 
+
+{
+  slug: "botox",
+  title: "Botox",
+  icon: Syringe,
+  image: botox,
+  category: "Aesthetic Treatment",
+  featured: true,
+  highlightStyle: "aesthetic",
+  short: "Reduce fine lines and wrinkles with expert Botox treatments.",
+  benefits: [
+    "Wrinkle reduction",
+    "Smoother skin",
+    "Youthful appearance"
+  ],
+},
+
+{
+  slug: "dermal-fillers",
+  title: "Dermal Fillers",
+  icon: Syringe,
+  image: filers,
+  category: "Aesthetic Treatment",
+  featured: true,
+  highlightStyle: "aesthetic",
+  short: "Enhance facial contours and restore lost volume with advanced dermal fillers.",
+  benefits: [
+    "Volume restoration",
+    "Facial contouring",
+    "Natural-looking enhancement"
+  ],
+},
+{
+  slug: "hifu",
+  title: "HIFU",
+  icon: Sparkles,
+  image: hifu1,
+  category: "Aesthetic Treatment",
+  featured: true,
+  highlightStyle: "aesthetic",
+  short: "Non-surgical skin tightening and lifting treatment using advanced ultrasound technology.",
+  benefits: [
+    "Skin tightening",
+    "Facial lifting",
+    "Collagen stimulation"
+  ],
+},
+
   {
     slug: "glow-rejuvenation",
     title: "Glow & Rejuvenation Therapy",
@@ -237,6 +288,22 @@ export const SERVICES: ServiceItem[] = [
     "Reduced accidental scar visibility",
     "Improved appearance of surgical scars",
     "Minimized stretch marks",
+  ],
+},
+{
+  slug: "hydra-facial",
+  title: "Hydra Facial",
+  icon: Sparkles,
+  image: hydra,
+  category: "Skin Treatment",
+  featured: false,
+  highlightStyle: "default",
+  short:
+    "Deep cleansing, exfoliation, hydration, and skin rejuvenation treatment for a healthy, radiant glow.",
+  benefits: [
+    "Deep skin cleansing",
+    "Intense hydration",
+    "Instant glow and rejuvenation",
   ],
 },
   {
@@ -301,32 +368,6 @@ export const SERVICES: ServiceItem[] = [
     benefits: ["Smoother texture", "Brighter tone", "Minimal downtime"],
   },
 
-
-  {
-    slug: "botox-fillers",
-    title: "Botox & Fillers",
-    icon: Syringe,
-    image: botox,
-    category: "Aesthetic Treatment",
-    featured: false,
-    highlightStyle: "default",
-    short: "Natural-looking facial enhancement procedures by experts.",
-    benefits: ["Wrinkle reduction", "Volume restoration", "Youthful appearance"],
-  },
-
-
-  {
-    slug: "hydra-facial",
-    title: "Hydra Facial",
-    icon: Waves,
-    image: hydra,
-    category: "Facial Treatment",
-    featured: false,
-    highlightStyle: "default",
-    short: "Deep cleansing and hydration facial for instant skin glow.",
-    benefits: ["Instant glow", "Hydrated skin", "Zero downtime"],
-  },
-
   {
     slug: "hair-regrowth",
     title: "Hair Regrowth Therapy",
@@ -338,6 +379,22 @@ export const SERVICES: ServiceItem[] = [
     short: "Mesotherapy, GFC, and advanced combination regrowth therapies.",
     benefits: ["Thicker hair", "Reduced hair fall", "Improved scalp health"],
   },
+  {
+  slug: "skin-diseases",
+  title: "Skin Diseases",
+  icon: Stethoscope,
+  image: skinDiseases,
+  category: "Skin Treatment",
+  featured: false,
+  highlightStyle: "default",
+  short:
+    "Expert care for acne, acne scars, eczema, psoriasis, fungal infections, vitiligo, melasma, rosacea, urticaria, warts, and other skin disorders.",
+  benefits: [
+    "Accurate diagnosis of skin conditions",
+    "Personalized treatment for acute and chronic diseases",
+    "Improved skin health and quality of life",
+  ],
+},
 ];
 
 export type Service = ServiceItem;
