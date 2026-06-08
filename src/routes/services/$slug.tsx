@@ -14,40 +14,51 @@ import type { Service } from "@/lib/services";
 
 import { Reveal } from "@/components/site/Reveal";
 
-
+type LoaderService = {
+  slug: string;
+  title: string;
+  short: string;
+  image: string;
+  benefits: string[];
+  category: string;
+};
 /* =========================
    ROUTE
    ========================= */
 export const Route = createFileRoute("/services/$slug")({
-  loader: ({ params }) => {
-    const service = SERVICES.find(
-      (s) => s.slug === params.slug
-    );
+ loader: ({ params }) => {
+  const service = SERVICES.find(
+    (s) => s.slug === params.slug
+  );
 
-    if (!service) {
-      throw notFound();
-    }
+  if (!service) {
+    throw notFound();
+  }
 
-    return { service };
-  },
+  return {
+    slug: service.slug,
+    title: service.title,
+    short: service.short,
+    image: service.image,
+    benefits: service.benefits,
+    category: service.category,
+  };
+},
 
-  head: ({ loaderData }) => {
-    const service = loaderData?.service;
+ head: ({ loaderData }) => ({
+  meta: [
+    {
+      title: loaderData?.title
+        ? `${loaderData.title} | Dr Himabindu's Clinic`
+        : "Service | Dr Himabindu's Clinic",
+    },
+    {
+      name: "description",
+      content: loaderData?.short ?? "",
+    },
+  ],
+}),
 
-    return {
-      meta: [
-        {
-          title: service
-            ? `${service.title} | Dr Himabindu's Clinic`
-            : "Service | Dr Himabindu's Clinic",
-        },
-        {
-          name: "description",
-          content: service?.short ?? "",
-        },
-      ],
-    };
-  },
 
   component: ServiceDetailPage,
 
@@ -90,11 +101,15 @@ const FAQS = [
    ========================= */
 
 function ServiceDetailPage() {
-  const { service } = Route.useLoaderData() as {
-    service: Service;
-  };
+  const service = Route.useLoaderData() as LoaderService;
 
-  const [open, setOpen] = useState<number | null>(0);
+const fullService = SERVICES.find(
+  (s) => s.slug === service.slug
+);
+
+const Icon = fullService?.icon;
+
+const [open, setOpen] = useState<number | null>(0);
 
   return (
     <div>
@@ -114,8 +129,9 @@ function ServiceDetailPage() {
             {/* TEXT */}
             <div>
               <div className="w-16 h-16 rounded-2xl gradient-hero flex items-center justify-center mb-5 shadow-glow">
-                <service.icon className="w-8 h-8 text-primary-foreground" />
-              </div>
+{Icon && (
+  <Icon className="w-8 h-8 text-primary-foreground" />
+)}              </div>
 
               <h1 className="font-display text-4xl md:text-6xl">
                 {service.title}

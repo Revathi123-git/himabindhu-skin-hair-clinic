@@ -192,7 +192,7 @@ export const SERVICES: ServiceItem[] = [
     category: "Featured Aesthetic",
     featured: true,
     highlightStyle: "aesthetic",
-    short: "Advanced injectable hydration treatments for glowing, youthful skin.",
+   short: "Our Skin Booster range includes Profhilo, Skinvive, Polynucleotide Therapy, and Hyaluronic Acid-based injectables that improve hydration, skin texture, elasticity, fine lines, and overall radiance.",
     benefits: ["Deep hydration", "Glass skin glow", "Improved skin texture"],
   },
 
