@@ -48,9 +48,10 @@ function HomePage() {
           />
         </div>
         {/* Overlays */}
-        <div className="absolute inset-0 -z-20 bg-gradient-to-br from-[oklch(0.18_0.04_200/0.85)] via-[oklch(0.22_0.05_210/0.7)] to-[oklch(0.3_0.08_180/0.6)]" />
+ <div className="absolute inset-0 -z-20 bg-gradient-to-br from-[oklch(0.18_0.06_265/0.88)] via-[oklch(0.22_0.08_265/0.75)] to-[oklch(0.3_0.1_265/0.65)]" />
         <div className="absolute inset-0 -z-20 bg-gradient-to-t from-background via-background/30 to-transparent" />
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_30%,oklch(0.7_0.13_185/0.35),transparent_55%),radial-gradient(circle_at_80%_70%,oklch(0.78_0.1_78/0.25),transparent_55%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_30%,oklch(0.42_0.11_265/0.4),transparent_55%),radial-gradient(circle_at_80%_70%,oklch(0.78_0.1_78/0.25),transparent_55%)]" />
+        {/* Floating decorative orbs */}
 
         {/* Floating decorative orbs */}
         <motion.div
@@ -77,7 +78,7 @@ function HomePage() {
           />
         ))}
 
-        <div className="container relative mx-auto px-4 lg:px-8 pt-28 pb-20 text-center">
+     <div className="container relative mx-auto px-4 lg:px-8 pt-28 pb-20 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,7 +95,7 @@ function HomePage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="font-display italic mt-8 text-2xl md:text-3xl text-gold"
           >
-            Hello, Welcome to
+       Hello, Welcome to
           </motion.p>
 
           <h1 className="font-display mt-3 text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-white max-w-5xl mx-auto">
@@ -107,10 +108,9 @@ function HomePage() {
                 className="inline-block mr-3"
               >
                 {word}
-              </motion.span>
-            ))}
+              </motion.span>   ))}
             <br />
-            <motion.span
+             <motion.span
               initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 1, delay: 0.95, ease: [0.22, 1, 0.36, 1] }}
@@ -120,7 +120,7 @@ function HomePage() {
             </motion.span>
           </h1>
 
-          <motion.p
+ <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.3 }}
@@ -141,8 +141,7 @@ function HomePage() {
             >
               <Calendar className="w-4 h-4" /> Book Appointment
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-smooth" />
-            </Link>
-            <a
+            </Link>            <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
