@@ -44,7 +44,7 @@ function HomePage() {
             className="w-full h-full object-cover"
             initial={{ scale: 1.15 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
           />
         </div>
         {/* Overlays */}
